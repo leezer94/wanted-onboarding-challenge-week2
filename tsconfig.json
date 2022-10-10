@@ -27,5 +27,7 @@
     "types": ["node"]
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", "next.config.js"]
 }
+
+// config 환결성정은 잘 모르겠음..
