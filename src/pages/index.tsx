@@ -4,37 +4,20 @@ import matter from 'gray-matter';
 import Link from 'next/link';
 import Card from '@/components/@commons/Card/Card';
 import Head from 'next/head';
+import { PropsType } from '@/types';
 
-const HomePage = ({
-  posts,
-}: {
-  posts: [
-    {
-      slug: string;
-      frontmatter: {
-        author: string;
-        categories: string[];
-        data: string;
-        image: string;
-        description: string;
-        slug: string;
-        tags: string[];
-        title: string;
-      };
-    },
-  ];
-}) => {
+const HomePage = ({ posts }: { posts: PropsType[] }) => {
   return (
     <div>
       <Head>
         <title>블로그 메인</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>
-      {posts.map(({ slug, frontmatter }, i) => {
+      {posts.map(({ slug, details }, i) => {
         return (
           <Link key={i} href={slug}>
             <a>
-              <Card details={frontmatter} />
+              <Card details={details} slug={''} content={''} />
             </a>
           </Link>
         );
