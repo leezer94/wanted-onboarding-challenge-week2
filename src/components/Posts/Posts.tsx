@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import { PropsType } from '@/types';
 
-export default function Posts({ details, slug, content }: PropsType) {
-  const { image, title, author, description, tags, date, categories } = details;
+export default function Posts({ frontmatter, slug, content }: PropsType) {
+  const { image, title, author, description, tags, date, categories } =
+    frontmatter;
 
   return (
     <>

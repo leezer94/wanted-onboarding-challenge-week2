@@ -1,5 +1,5 @@
 type PropsType = {
-  details: {
+  frontmatter: {
     author: string;
     categories: string[];
     date: string;

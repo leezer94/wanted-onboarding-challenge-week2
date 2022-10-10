@@ -4,8 +4,8 @@ import matter from 'gray-matter';
 import Posts from '@/components/Posts/Posts';
 import { PropsType } from '@/types';
 
-export function Article({ details, slug, content }: PropsType) {
-  return <Posts details={details} slug={slug} content={content} />;
+export function Article({ frontmatter, slug, content }: PropsType) {
+  return <Posts frontmatter={frontmatter} slug={slug} content={content} />;
 }
 
 export async function getStaticPaths() {
@@ -47,7 +47,7 @@ export async function getStaticProps({ params: { slug } }: any) {
 
   return {
     props: {
-      details: frontmatter,
+      frontmatter,
       slug,
       content,
     },

@@ -13,11 +13,11 @@ const HomePage = ({ posts }: { posts: PropsType[] }) => {
         <title>블로그 메인</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>
-      {posts.map(({ slug, details }, i) => {
+      {posts.map(({ slug, frontmatter }, i) => {
         return (
           <Link key={i} href={slug}>
             <a>
-              <Card details={details} slug={''} content={''} />
+              <Card frontmatter={frontmatter} slug={''} content={''} />
             </a>
           </Link>
         );

@@ -1,7 +1,7 @@
 import { PropsType } from '@/types';
 
-const Card = ({ details }: PropsType) => {
-  const { image, title, categories, description } = details;
+const Card = ({ frontmatter }: PropsType) => {
+  const { image, title, categories, description } = frontmatter;
 
   return (
     <div className=' bg-white text-slate-500 shadow-slate-200 mb-20 mt-5 flex overflow-hidden rounded shadow-md'>
